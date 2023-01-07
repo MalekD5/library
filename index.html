@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Library</title>
+    <link rel="stylesheet" href="./styles.css" />
+    <script src="./main.js" defer></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="">
+        <button type="button" onclick="addBooksToHTML()">Load books</button>
+        <button type="button" onclick="toggleModal()">Add book</button>
+      </div>
+      <div class="books-container"></div>
+
+      <div class="overlay">
+        <div class="overlay__form-container">
+          <h1 class="text-center">Add a book</h1>
+          <form class="form-container" onclick="submitForm(event)">
+            <label for="title">
+              Title:
+              <input type="text" id="title" name="title" placeholder="title" />
+            </label>
+            <label for="author">
+              Author:
+              <input
+                type="text"
+                id="author"
+                name="author"
+                placeholder="author"
+              />
+            </label>
+            <label for="pages">
+              Pages:
+              <input type="number" id="pages" name="pages" value="100" />
+            </label>
+            <label for="read">
+              Completed the book?
+              <input
+                type="checkbox"
+                id="read"
+                name="read"
+                value="yes"
+                onclick="checkbox_fix(event)"
+            /></label>
+            <div>
+                <button type="submit" onclick='handleAddBook(event)'>Submit</button>
+                <button type='button' onclick='toggleModal()'>close</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
