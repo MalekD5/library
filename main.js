@@ -1,19 +1,19 @@
-function Book(title, author, pages, read) {
-    this.title = title;
-    this.author = author;
-    this.pages = pages;
-    this.read = read;
-}
+class Book {
 
-const BookPrototype = {
-    info: function() {
+    constructor(title, author, pages, read) {
+        this.title = title;
+        this.author = author;
+        this.pages = pages;
+        this.read = read;
+    }
+
+    info() {
         return `${this.title} by ${this.author}, ${this.pages} pages, ${
             this.read ? 'you\'ve read this book!' : 'not read yet'
         }`;
-    },
-}
+    }
 
-Book.prototype = BookPrototype;
+}
 
 let books = [new Book('The Laws of Human natureasdasdasdasdasd', 'Ribert Greene', 690, false), new Book('Atomic Habits', 'James Clear', 285, true), new Book('The psychology of Money', 'Morgan Housel', 255, true)];
 
